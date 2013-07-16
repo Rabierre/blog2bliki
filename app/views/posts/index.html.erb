@@ -1,4 +1,11 @@
+<div id="wrapper">
+<div id="header">
 <h1>Listing posts</h1>
+</div>
+
+<%= render "layouts/menu" %>
+
+<div id="content">
 <%= link_to 'New Post', new_post_path %>
 
 <table>
@@ -17,3 +24,7 @@
         </tr>
     <% end %>
 </table>
+</div>
+
+<%= render "layouts/footer" %>
+</div>

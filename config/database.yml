@@ -30,7 +30,7 @@ production:
 #  adapter: sqlite3
 #  database: db/production.sqlite3
   adapter: postgresql
-  database: my_database_production
+  database: df9kc699fskt5v #my_database_production
   pool: 5
   username: zichawgponkitq
   password: McPUXjClagTmdNvh92GY34n3pb
