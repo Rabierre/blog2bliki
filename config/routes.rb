@@ -1,9 +1,15 @@
 Blog::Application.routes.draw do
 #  get "welcome/index"
   root to: "welcome#index"
+  
   resources :posts do
     resources :comments
   end
+
+  get 'books/list'  # should be first
+  resources :books do
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

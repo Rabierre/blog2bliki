@@ -1,0 +1,12 @@
+<% @books.each do |book| %>
+    <tr>
+        <td><%= book.title %></td>
+        <td><%= book.author %></td>
+        <td><%= book.summary %></td>
+        <td><%= link_to 'Show', book_path(book) %></td>
+        <td><%= link_to 'Delete', book_path(book),
+                        method: :delete, data: {confirm: 'Really Remove this book?'} %></td>
+        
+    </tr>
+    <!-- 여기에 줄 긋기 -->
+<% end %>

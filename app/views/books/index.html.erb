@@ -1,0 +1,28 @@
+<div id="wrapper">
+<%= render "layouts/head" %>
+<%= render "layouts/menu" %>
+
+<div id="content">
+    <h2>Recent Books</h2>
+    <table>
+        <% @books.each do |book| %>
+            <tr>
+                <td><%= link_to book.title, book_path(book) %></td>
+                <td><%= book.author %></td>
+                <td><%= book.summary %></td>
+                <td><%= link_to 'Delete', book_path(book),
+                                method: :delete, data: {confirm: 'Really Remove this book?'} %></td>
+                
+            </tr>
+            <!-- 여기에 줄 긋기 -->
+        <% end %>
+    </table>
+    <%= link_to 'New Book', new_book_path %>
+    <%= link_to 'Book List', books_list_path %>
+
+    <h2>Recent Reviews</h2>
+    <%= render template: "books/list" %>
+</div>
+
+<%= render "layouts/footer" %>
+</div>

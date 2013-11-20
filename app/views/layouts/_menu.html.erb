@@ -1,4 +1,15 @@
 <div id="menu">
     <strong>Menu</strong><br>
-    <%= link_to "My Blog", controller: "posts" %>    
+
+    <div id="linkbox">
+        <ul>
+        <li><%= link_to "blog", controller: "posts" %></li>
+        <li><%= link_to "books", controller:"books" %></li>
+        </ul>
+    </div>
+    <br>
+
+    <div id="github-badge">
+        <iframe src="http://githubbadge.appspot.com/badge/rabierre?s=1" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder=0></iframe>
+    </div>
 </div>

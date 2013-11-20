@@ -1,17 +1,28 @@
-<p>
-    <strong> Title:</strong>
-    <%= @post.title %>
-</p>
-<p>
-    <strong>Text:</strong>
-    <%= @post.text %>
-</p>
+<div id="wrapper">
+<%= render "layouts/head" %>
+<%= render "layouts/menu" %>
 
-<h2>Comments</h2>
-<%= render @post.comments %>
+<div id="content">
+    <p>
+        <h2> Title:
+        <%= @post.title %>
+        </h2>
+    </p>
+    <p>
+        <%= @post.text %>
+    </p>
 
-<h2>Add a comment here:</h2>
-<%= render "comments/form" %>
+    <div id="comment">
+        <h2>Comments</h2>
+        <%= render @post.comments %>
 
-<%= link_to 'Back', posts_path %> |
-<%= link_to 'Edit', edit_post_path(@post) %>
+        <h2>Add a comment here</h2>
+        <%= render "comments/form" %>
+    </div>
+
+    <%= link_to 'Back', posts_path %> |
+    <%= link_to 'Edit', edit_post_path(@post) %>
+</div>
+
+<%= render "layouts/footer" %>
+</div>
