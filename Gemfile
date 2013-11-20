@@ -6,7 +6,7 @@ gem 'rails', '4.0.0'
 # thin webserver
 gem 'thin'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '1.3.7'
+#gem 'sqlite3', '1.3.7'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
